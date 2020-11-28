@@ -13,22 +13,6 @@ else
 	chmod 777 /config/Frankfurt.ovpn
 fi
 
-LOGIN_CONF="/config/logindata.conf"
-
-if [ -f "$LOGIN_CONF" ]; then
-	echo "$LOGIN_CONF exist"
-	chmod +x $LOGIN_CONF
-	chmod 777 $LOGIN_CONF
-else 
-	echo "$LOGIN_CONF does not exist"
-	cp /logindata.conf $LOGIN_CONF
-	chmod +x $LOGIN_CONF
-	chmod 777 $LOGIN_CONF
-fi
-
-#authpass='auth-user-pass /config/logindata.conf' - This shouldn't be required if set up correctly!
-#sed -i "/auth-user-pass/c $authpass" $OVPN_FILEPATH - This shouldn't be required if set up correctly!
-
 ### OpenVPN
 
 openvpn --config $OVPN_FILEPATH
