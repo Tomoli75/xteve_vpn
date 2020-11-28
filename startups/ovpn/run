@@ -4,4 +4,5 @@ OVPN_FILEPATH="/config/openvpn/${OPENVPN_FILE}"
 
 ### OpenVPN
 
+cat /vpn/auth.txt
 openvpn --config "${OVPN_FILEPATH}" &
