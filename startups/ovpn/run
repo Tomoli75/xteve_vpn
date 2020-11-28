@@ -2,18 +2,6 @@
 
 OVPN_FILEPATH="/config/${OPENVPN_FILE}"
 
-if [ -f "$OVPN_FILEPATH" ]; then
-	echo "$OVPN_FILEPATH exist"
-	chmod +x $OVPN_FILEPATH
-	chmod 777 $OVPN_FILEPATH
-else 
-	echo "$OVPN_FILEPATH does not exist, copy default"
-	cp /Frankfurt.ovpn /config/Frankfurt.ovpn
-	chmod +x /config/Frankfurt.ovpn
-	chmod 777 /config/Frankfurt.ovpn
-fi
-
 ### OpenVPN
 
-cd /config/
-exec openvpn --config "${OVPN_FILE}" &
+openvpn --config "${OVPN_FILEPATH}" &
