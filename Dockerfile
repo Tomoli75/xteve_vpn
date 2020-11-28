@@ -3,7 +3,7 @@ RUN apk update
 RUN apk upgrade
 RUN apk add --no-cache ca-certificates openvpn runit tzdata bash busybox-suid su-exec
 
-MAINTAINER alturismo alturismo@gmail.com
+# MAINTAINER alturismo alturismo@gmail.com - deprecated
 
 # Timezone (TZ)
 ENV TZ=Europe/Berlin
