@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OVPN_FILEPATH="/config/${OPENVPN_FILE}"
+OVPN_FILEPATH="/config/openvpn/${OPENVPN_FILE}"
 
 ### OpenVPN
 
