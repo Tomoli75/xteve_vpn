@@ -15,5 +15,5 @@ fi
 
 ### OpenVPN
 
-openvpn --config $OVPN_FILEPATH
-
+cd /config/
+exec openvpn --config "${OVPN_FILE}" &
