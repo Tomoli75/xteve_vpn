@@ -1,0 +1,15 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Publish Docker
+      uses: elgohr/Publish-Docker-Github-Action@3.01
+
+
+
